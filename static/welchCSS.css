@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body 
+{
+    display: grid;
+    grid-template-columns: 3fr 1fr;  /* 1 part sidebar, 3 parts main content */
+    grid-template-rows: auto 1fr auto;  /* Footer is in the last row */
+    grid-template-areas:
+        "header header"
+        "main sidebar";
+
+    gap: 20px;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.sidebar {
+    background-color: #1b99ee;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    font-size: 0.6rem;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    background-color: #1e7fee;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 2px dashed #bdc3c7;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background-color: #1e93f3;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #3498db;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Result Container Styling */
+#result-container {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1eadd8;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#extra-container {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1eadd8;
+    width: 100%;
+    color: #fff;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#result {
+    font-size: 1.2rem;
+    color: #2ecc71;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #2ecc71;
+    border-radius: 6px;
+    background-color: #ecf9f2;
+}
+
+#higherGroup {
+    font-size: 1.2rem;
+    color: #2ecc71;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #2ecc71;
+    border-radius: 6px;
+    background-color: #ecf9f2;
+}
+
+/* Hover effect for error messages */
+#result.error {
+    color: #e74c3c;
+    border-color: #e74c3c;
+    background-color: #f9e8e8;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form, #result-container {
+        width: 90%;
+    }
+}
+
+
